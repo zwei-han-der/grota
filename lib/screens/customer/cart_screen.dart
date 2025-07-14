@@ -23,47 +23,60 @@ class CartScreen extends StatelessWidget {
           final itens = cartService.itens;
           
           if (itens.isEmpty) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(32),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF780000).withValues(alpha: 0.1),
-                      shape: BoxShape.circle,
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: 80),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(32),
+                      child: Icon(
+                        FontAwesomeIcons.cartShopping,
+                        size: 80,
+                        color: const Color(0xFF780000),
+                      ),
                     ),
-                    child: Icon(
-                      FontAwesomeIcons.cartShopping,
-                      size: 80,
-                      color: const Color(0xFF780000),
-                    ),
-                  ),
-                  const SizedBox(height: 32),
-                  Text(
+                  ],
+                ),
+                const SizedBox(height: 32),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  child: Text(
                     'Seu carrinho está vazio',
                     style: Theme.of(context).textTheme.displaySmall,
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 16),
-                  Text(
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  child: Text(
                     'Adicione produtos para começar suas compras',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: Colors.grey[600],
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 40),
-                  ElevatedButton.icon(
-                    onPressed: () => Navigator.of(context).pop(),
-                    icon: const Icon(FontAwesomeIcons.bagShopping),
-                    label: const Text('Ver Produtos'),
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                ),
+                const SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton.icon(
+                      onPressed: () => Navigator.of(context).pop(),
+                      icon: const Icon(FontAwesomeIcons.bagShopping),
+                      label: const Text('Ver Produtos'),
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+                const Spacer(),
+              ],
             );
           }
 
