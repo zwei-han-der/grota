@@ -1,4 +1,4 @@
-# 🌲 Wood - E-commerce de Lenha
+# 🌲 Produtos da Grota - E-commerce de Lenha
 
 Wood é um aplicativo Flutter para compra e venda de lenha, com integração ao Firebase, arquitetura orientada a objetos e dois tipos de usuários: cliente e administrador.
 
@@ -60,9 +60,9 @@ lib/
 - 🔥 Firebase (Auth, Firestore)
 - 🧩 Provider
 
-## 📄 Licença
-Este projeto está sob a licença MIT.
-
-## Configuração do Firebase
+## 🔧 Configuração do Firebase
 
 Os arquivos de configuração do Firebase (`android/app/google-services.json` e `lib/firebase_options.dart`) **não estão incluídos no repositório** por motivos de segurança. Para rodar o projeto, obtenha esses arquivos no [console do Firebase](https://console.firebase.google.com/) e coloque-os nos respectivos diretórios.
+
+## 📄 Licença
+Este projeto está sob a licença MIT.
